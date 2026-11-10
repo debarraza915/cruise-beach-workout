@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4-Day Cruise Beach Ready Plan</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', system_ui, sans-serif;
+    background: #f7f5f2;
+    color: #1a1a1a;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .board {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #fffef9;
+    border: 8px solid #e8e4d9;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    padding: 28px 24px 40px;
+    position: relative;
+  }
+  .board::before {
+    content: "";
+    position: absolute;
+    top: 12px; left: 12px; right: 12px; bottom: 12px;
+    border: 1px dashed #d4cfc0;
+    border-radius: 6px;
+    pointer-events: none;
+  }
+  h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 6px;
+    color: #2c2c2c;
+  }
+  .subtitle {
+    text-align: center;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  .days {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+  }
+  .day-btn {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    padding: 8px 18px;
+    border: 2px solid #333;
+    background: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .day-btn.active, .day-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+  }
+  .workout {
+    display: none;
+  }
+  .workout.active { display: block; }
+  .workout h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 36px;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+  .exercise {
+    background: #fff;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    transition: background 0.15s;
+  }
+  .exercise.done {
+    background: #f0f7f0;
+    border-color: #b8d4b8;
+  }
+  .exercise input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin-top: 2px;
+    accent-color: #2a7a2a;
+    cursor: pointer;
+  }
+  .ex-content { flex: 1; }
+  .ex-name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .ex-sets {
+    font-family: 'Caveat', cursive;
+    font-size: 20px;
+    color: #333;
+    margin-top: 2px;
+  }
+  .notes {
+    margin-top: 28px;
+    background: #fff8e7;
+    border: 1.5px dashed #e6c87a;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .notes strong { font-family: 'Caveat', cursive; font-size: 20px; }
+  .footer {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 13px;
+    color: #888;
+  }
+  @media (max-width: 600px) {
+    h1 { font-size: 34px; }
+    .board { padding: 18px 12px 30px; }
+    .day-btn { font-size: 18px; padding: 6px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="board">
+  <h1>Cruise Beach Ready</h1>
+  <p class="subtitle">4-Day Foundational Split • 4 Weeks • Upper Focus</p>
+
+  <div class="days">
+    <button class="day-btn active" data-day="1">Day 1</button>
+    <button class="day-btn" data-day="2">Day 2</button>
+    <button class="day-btn" data-day="4">Day 4</button>
+    <button class="day-btn" data-day="5">Day 5</button>
+  </div>
+
+  <!-- Day 1 -->
+  <div class="workout active" id="day1">
+    <h2>Upper A — Push</h2>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Incline DB Press</div><div class="ex-sets">4 × 6–10</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Flat DB Press or Floor Press</div><div class="ex-sets">3 × 8–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">DB Lateral Raises (strict)</div><div class="ex-sets">3–4 × 12–15</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Dips or Close-Grip Push-ups</div><div class="ex-sets">3 × 8–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Triceps Pushdowns or Overhead Extensions</div><div class="ex-sets">2–3 × 10–15</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Abs: Hanging Knee Raises or Reverse Crunches</div><div class="ex-sets">3 × 10–15</div></div></div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="workout" id="day2">
+    <h2>Lower A</h2>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Back Squat or Goblet Squat</div><div class="ex-sets">4 × 6–10</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Romanian Deadlift</div><div class="ex-sets">3–4 × 8–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Walking Lunges or Bulgarian Split Squats</div><div class="ex-sets">3 × 8–10 / leg</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Leg Press or Step-ups</div><div class="ex-sets">3 × 10–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Core: Hanging Leg Raises + Side Planks</div><div class="ex-sets">3 rounds</div></div></div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="workout" id="day4">
+    <h2>Upper B — Pull</h2>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Pull-ups or Neutral Lat Pulldowns</div><div class="ex-sets">4 × 6–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Bent-over or Chest-supported Rows</div><div class="ex-sets">4 × 8–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Single-arm DB Rows or Seated Cable Rows</div><div class="ex-sets">3 × 10–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Face Pulls or Band Pull-aparts</div><div class="ex-sets">3 × 15–20</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Curls + Hammer Curls</div><div class="ex-sets">3 × 10–15 total</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Abs: Planks or Dead Bugs</div><div class="ex-sets">3 sets</div></div></div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="workout" id="day5">
+    <h2>Lower B</h2>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Goblet or Front Squat Variation</div><div class="ex-sets">3 × 6–10</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Romanian Deadlift or Stiff-leg DL</div><div class="ex-sets">3 × 8–12</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Lunges or Step-ups</div><div class="ex-sets">3 × 8–10 / leg</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Optional Farmer or Suitcase Carries</div><div class="ex-sets">2–3 × 30–50 m</div></div></div>
+    <div class="exercise"><input type="checkbox"><div class="ex-content"><div class="ex-name">Core Circuit</div><div class="ex-sets">3 rounds</div></div></div>
+  </div>
+
+  <div class="notes">
+    <strong>Quick Notes</strong><br>
+    Progress by adding weight or 1–2 reps each week. Prioritize form. Rows ≥ press volume. No calf raises. Swap any lift that feels off for the closest compound alternative. High protein + deficit + daily steps. Rest or walk on off days.
+  </div>
+
+  <div class="footer">Whiteboard style • Check off as you go • Reset by refreshing</div>
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.day-btn');
+  const workouts = document.querySelectorAll('.workout');
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      workouts.forEach(w => w.classList.remove('active'));
+      btn.classList.add('active');
+      const day = btn.dataset.day;
+      document.getElementById('day' + day).classList.add('active');
+    });
+  });
+
+  // Persist checkboxes in localStorage
+  document.querySelectorAll('.exercise input').forEach((cb, i) => {
+    const key = 'ex-' + i;
+    cb.checked = localStorage.getItem(key) === 'true';
+    cb.closest('.exercise').classList.toggle('done', cb.checked);
+    cb.addEventListener('change', () => {
+      localStorage.setItem(key, cb.checked);
+      cb.closest('.exercise').classList.toggle('done', cb.checked);
+    });
+  });
+</script>
+</body>
+</html>
